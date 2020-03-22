@@ -4,7 +4,7 @@
       <v-container>
         <v-card>
           <v-card-title>
-            Covid
+            Covid - Data in real time
             <v-spacer></v-spacer>
             <v-text-field
               v-model="search"
@@ -19,6 +19,7 @@
             :loading-text="'Fetching data, please wait...'"
             :headers="headers"
             :items="items"
+            :fixedHeader="true"
             :items-per-page="25"
             :search="search"
           ></v-data-table>
