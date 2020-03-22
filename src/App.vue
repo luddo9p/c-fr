@@ -4,7 +4,7 @@
       <v-container>
         <v-card>
           <v-card-title>
-            Covid - Data in real time
+            Covid-19
             <v-spacer></v-spacer>
             <v-text-field
               v-model="search"
@@ -19,8 +19,8 @@
             :loading-text="'Fetching data, please wait...'"
             :headers="headers"
             :items="items"
-            :fixedHeader="true"
-            :items-per-page="25"
+            :fixed-header="fixedHeader"
+            :items-per-page="10"
             :search="search"
           ></v-data-table>
         </v-card>
@@ -35,6 +35,7 @@ export default {
   data() {
     return {
       search: "",
+      fixedHeader: true,
       loaded: false,
       headers: [
         {
